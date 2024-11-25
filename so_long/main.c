@@ -6,7 +6,7 @@
 /*   By: aalbrech <aalbrech@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:57:05 by aalbrech          #+#    #+#             */
-/*   Updated: 2024/11/24 16:42:46 by aalbrech         ###   ########.fr       */
+/*   Updated: 2024/11/25 20:05:30 by aalbrech         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,3 @@ int	main(int argc, char *argv[])
 	ending_game(NULL, game, 1);
 	return (0);
 }
-
-/*
-==432623== LEAK SUMMARY:
-==432623==    definitely lost: 0 bytes in 1 blocks  ???WhaT IS THAT ONE BLOCK
-==432623==    indirectly lost: 0 bytes in 0 blocks
-==432623==      possibly lost: 0 bytes in 0 blocks
-==432623==    still reachable: 317,955 bytes in 3,106 blocks
-==432623==         suppressed: 0 bytes in 0 blocks
-
-make relinks??!!!!
-MLX dont turn in the folder, make the program clone mlx into a folder during run
-*/
