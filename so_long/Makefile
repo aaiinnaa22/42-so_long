@@ -10,7 +10,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIBMLX	:= ./MLX42
 MLX_BUILD := $(LIBMLX)/build/libmlx42.a
 
-HEADERS	:= -I ./include -I $(LIBMLX)/include
+HEADERS	:= -I $(LIBMLX)/include
 LIBS	:= $(MLX_BUILD) -ldl -lglfw -pthread -lm
 
 OBJ_SL = $(SRC_SL:.c=.o)
