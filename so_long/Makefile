@@ -25,11 +25,13 @@ GNL_DIR = ./get_next_line
 
 NAME = so_long
 
-.PHONY = all clean fclean re
+CLONE_CHECK := .cloned
+
+.PHONY = all clean fclean re .cloned
 
 all: $(NAME)
 
-$(NAME): $(OBJ_SL) $(FT_PRINTF) $(GNL) $(MLX_BUILD)
+$(NAME): $(MLX_BUILD) $(OBJ_SL) $(FT_PRINTF) $(GNL)
 	$(CC) $(CFLAGS) $(OBJ_SL) $(FT_PRINTF) $(GNL) $(LIBS) $(HEADERS) -o $(NAME)
 
 $(FT_PRINTF):
@@ -38,11 +40,17 @@ $(FT_PRINTF):
 $(GNL):
 	$(MAKE) -C $(GNL_DIR)
 
-$(MLX_BUILD):
-		@if [ ! -f "$(LIBMLX)/build" ]; then \
-		cmake -B $(LIBMLX)/build $(LIBMLX); \
-		fi
-		$(MAKE) -C $(LIBMLX)/build
+$(MLX_BUILD): .cloned
+	@if [ ! -f "$(LIBMLX)/build" ]; then \
+	cmake -B $(LIBMLX)/build $(LIBMLX); \
+	fi
+	$(MAKE) -C $(LIBMLX)/build
+
+.cloned:
+	@if [ ! -d "$(LIBMLX)" ]; then \
+	git clone https://github.com/codam-coding-college/MLX42.git $(LIBMLX); \
+	fi
+	@touch $(CLONE_CHECK)
 
 clean:
 	rm -f $(OBJ_SL)
