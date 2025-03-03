@@ -4,7 +4,7 @@ Hive Helsinki project
 
 ☆ INFO ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆
 
-This is the first more graphical project of the curriculum. The project is a 2D game in C, where a character has to collect all collectibles on the screen, and then go out through the exit. The game will run in a created window on your screen. Keyboard buttons W, A, S and D are used for moving around the character, and ESC is used for closing the window of the game. 
+This is the first more graphical project of the curriculum. The project is a 2D game in C, where a character has to collect all collectibles on the screen, and then go out through the exit. The game will run in a newly created window on your screen. Keyboard buttons W, A, S and D are used for moving around the character, and ESC is used for closing the window of the game. 
 
 
 
