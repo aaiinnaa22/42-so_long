@@ -38,7 +38,7 @@ Every sort of character has an assigned texture. For every position of a charact
 
 In the terminal command-line:
 1. git clone https://github.com/aaiinnaa22/42-so_long.git && cd 42-so_long/so_long
-4. MAKE
+4. make
 5. ./so_long yourfile.ber (choose a file from /mymaps or make your own)
 6. Play the game:)
 
